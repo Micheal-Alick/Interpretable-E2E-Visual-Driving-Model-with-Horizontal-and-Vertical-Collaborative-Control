@@ -1,0 +1,278 @@
+(base) PS C:\Users\15403>  cd "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main"
+(base) PS E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main> conda activate carla-sim-2
+(carla-sim-2) PS E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main> python train_new.py --batch_size 32 --accumulate_steps 1 --epochs 40 --use_all_cameras --use_speed_input --dataset_path "multi_weather_dataset60000" --modelsave_path "修改loss权重的第三版模型" --num_workers 6 --lambda_steer 1.0 --lambda_throttle 1.0 --lambda_brake 1.35 --lambda_conflict 0.25 --lambda_tl 0.5 --lambda_stop 0.5
+使用硬件: cuda
+是否使用速度输入: True
+是否启用AMP(FP16): True
+从 multi_weather_dataset60000 载入数据
+ 载入了 180000 个样本数据
+合并后总样本数: 180000
+训练样本数: 144000
+验证样本数: 36000
+TL类别计数(训练集): [59513, 83235, 1252, 0]
+TL类别权重(训练集): [0.0609, 0.0436, 2.8955, 0.0]
+Stop样本计数(训练集): neg=83567, pos=60433, pos_weight=1.3828
+总参数量: 11,387,592
+可训练参数量: 11,387,592
+
+开始多任务训练...
+总训练轮次: 40
+Batch size: 32
+特征层学习率: 0.001
+使用全部摄像头数据: True
+数据集路径: data_weathers/multi_weather_dataset60000
+模型保存路径: checkpoints_weathers_new/修改loss权重的第三版模型
+Loss权重: steer=1.000, throttle=1.000, brake=1.350, conflict=0.250, tl=0.500, stop=0.500
+TL类别权重(用于CE): [0.0609, 0.0436, 2.8955, 0.0]
+Stop pos_weight(用于BCE): 1.3828
+
+当前轮次： 1/40
+Train: total=0.101697, steer=0.033303, throttle=0.033485,
+brake=0.003557, conflict=0.001451, tl=0.034861, stop=0.024629
+Val:   total=0.712966, steer=0.011045, throttle=0.024959,
+brake=0.007918, conflict=0.000239, tl=1.218172, stop=0.114255
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.712966
+
+当前轮次： 2/40
+Train: total=0.051215, steer=0.017553, throttle=0.017486,
+brake=0.001744, conflict=0.000350, tl=0.016741, stop=0.010725
+Val:   total=0.100295, steer=0.009449, throttle=0.023792,
+brake=0.008798, conflict=0.000918, tl=0.025305, stop=0.084590
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.100295
+
+当前轮次： 3/40
+Train: total=0.034500, steer=0.014062, throttle=0.012024,
+brake=0.001280, conflict=0.000298, tl=0.005399, stop=0.007826
+Val:   total=0.081823, steer=0.008796, throttle=0.020219,
+brake=0.006279, conflict=0.000289, tl=0.021725, stop=0.066792
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.081823
+
+当前轮次： 4/40
+Train: total=0.040462, steer=0.014360, throttle=0.012826,
+brake=0.001623, conflict=0.000408, tl=0.013316, stop=0.008651
+Val:   total=0.087114, steer=0.008630, throttle=0.020095,
+brake=0.005571, conflict=0.000506, tl=0.040508, stop=0.060975
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 5/40
+Train: total=0.031672, steer=0.012418, throttle=0.010053,
+brake=0.001281, conflict=0.000336, tl=0.007767, stop=0.007010
+Val:   total=0.108504, steer=0.008850, throttle=0.020381,
+brake=0.007182, conflict=0.000605, tl=0.047932, stop=0.090919
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 6/40
+Train: total=0.030286, steer=0.011606, throttle=0.008969,
+brake=0.001268, conflict=0.000332, tl=0.008770, stop=0.007064
+Val:   total=0.087918, steer=0.008590, throttle=0.021017,
+brake=0.006022, conflict=0.000448, tl=0.032781, stop=0.067361
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 7/40
+Train: total=0.031020, steer=0.011679, throttle=0.008549,
+brake=0.001400, conflict=0.000336, tl=0.010383, stop=0.007253
+Val:   total=0.121106, steer=0.010430, throttle=0.021756,
+brake=0.008527, conflict=0.000262, tl=0.049121, stop=0.105566
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 8/40
+Train: total=0.026936, steer=0.010890, throttle=0.007484,
+brake=0.001316, conflict=0.000330, tl=0.006122, stop=0.007284
+Val:   total=0.095360, steer=0.008500, throttle=0.021823,
+brake=0.007703, conflict=0.001707, tl=0.035100, stop=0.073323
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 9/40
+Train: total=0.027720, steer=0.010844, throttle=0.007502,
+brake=0.001356, conflict=0.000376, tl=0.007680, stop=0.007219
+Val:   total=0.098954, steer=0.008967, throttle=0.019675,
+brake=0.005387, conflict=0.000842, tl=0.042533, stop=0.083125
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 10/40
+Train: total=0.021570, steer=0.009346, throttle=0.005558,
+brake=0.001195, conflict=0.000336, tl=0.004294, stop=0.005643
+Val:   total=0.106409, steer=0.007812, throttle=0.018759,
+brake=0.006318, conflict=0.000641, tl=0.050523, stop=0.091777
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 11/40
+Train: total=0.019418, steer=0.008476, throttle=0.004670,
+brake=0.001095, conflict=0.000447, tl=0.003815, stop=0.005549
+Val:   total=0.081630, steer=0.003708, throttle=0.017780,
+brake=0.004866, conflict=0.000750, tl=0.047719, stop=0.059051
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+New best model saved: total=0.081630
+
+当前轮次： 12/40
+Train: total=0.018783, steer=0.007850, throttle=0.004327,
+brake=0.001006, conflict=0.000452, tl=0.004415, stop=0.005855
+Val:   total=0.082228, steer=0.003585, throttle=0.018919,
+brake=0.005292, conflict=0.000445, tl=0.028044, stop=0.076893
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 13/40
+Train: total=0.016759, steer=0.007395, throttle=0.004062,
+brake=0.001052, conflict=0.000431, tl=0.002314, stop=0.005235
+Val:   total=0.087615, steer=0.002607, throttle=0.016852,
+brake=0.005025, conflict=0.000951, tl=0.044763, stop=0.077507
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 14/40
+Train: total=0.019539, steer=0.007291, throttle=0.004136,
+brake=0.001026, conflict=0.000475, tl=0.007217, stop=0.006001
+Val:   total=0.078583, steer=0.003782, throttle=0.018480,
+brake=0.005076, conflict=0.000975, tl=0.039662, stop=0.058785
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+New best model saved: total=0.078583
+
+当前轮次： 15/40
+Train: total=0.017427, steer=0.007151, throttle=0.003961,
+brake=0.001073, conflict=0.000450, tl=0.003772, stop=0.005736
+Val:   total=0.076759, steer=0.002097, throttle=0.017349,
+brake=0.005012, conflict=0.000630, tl=0.037466, stop=0.063313
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+New best model saved: total=0.076759
+
+当前轮次： 16/40
+Train: total=0.016707, steer=0.006911, throttle=0.003935,
+brake=0.001064, conflict=0.000430, tl=0.002786, stop=0.005848
+Val:   total=0.083525, steer=0.003779, throttle=0.016084,
+brake=0.005142, conflict=0.000732, tl=0.029566, stop=0.083508
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 17/40
+Train: total=0.017480, steer=0.006977, throttle=0.004000,
+brake=0.001013, conflict=0.000458, tl=0.004567, stop=0.005474
+Val:   total=0.070976, steer=0.002556, throttle=0.016386,
+brake=0.006473, conflict=0.000999, tl=0.028906, stop=0.057186
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+New best model saved: total=0.070976
+
+当前轮次： 18/40
+Train: total=0.016000, steer=0.006744, throttle=0.003569,
+brake=0.000873, conflict=0.000422, tl=0.003180, stop=0.005628
+Val:   total=0.109447, steer=0.001714, throttle=0.016243,
+brake=0.005014, conflict=0.000659, tl=0.098629, stop=0.070487
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 19/40
+Train: total=0.016757, steer=0.006600, throttle=0.003604,
+brake=0.000836, conflict=0.000408, tl=0.004568, stop=0.006075
+Val:   total=0.099843, steer=0.002321, throttle=0.017377,
+brake=0.004966, conflict=0.000813, tl=0.053867, stop=0.092609
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 20/40
+Train: total=0.017397, steer=0.006876, throttle=0.003677,
+brake=0.000916, conflict=0.000447, tl=0.005074, stop=0.005916
+Val:   total=0.071959, steer=0.002655, throttle=0.017141,
+brake=0.005281, conflict=0.000572, tl=0.027501, stop=0.062281
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 21/40
+Train: total=0.015296, steer=0.006553, throttle=0.003384,
+brake=0.000846, conflict=0.000414, tl=0.002888, stop=0.005338
+Val:   total=0.078569, steer=0.002612, throttle=0.017884,
+brake=0.005101, conflict=0.000483, tl=0.031637, stop=0.070494
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 22/40
+Train: total=0.016414, steer=0.006678, throttle=0.003603,
+brake=0.000882, conflict=0.000428, tl=0.004444, stop=0.005225
+Val:   total=0.073617, steer=0.002302, throttle=0.017269,
+brake=0.004909, conflict=0.001646, tl=0.032271, stop=0.061746
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 23/40
+Train: total=0.014656, steer=0.006550, throttle=0.003388,
+brake=0.000809, conflict=0.000406, tl=0.002217, stop=0.004832
+Val:   total=0.077420, steer=0.002043, throttle=0.016599,
+brake=0.004833, conflict=0.001334, tl=0.039111, stop=0.064729
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+
+当前轮次： 24/40
+Train: total=0.013568, steer=0.005579, throttle=0.002728,
+brake=0.000732, conflict=0.000395, tl=0.003207, stop=0.005139
+Val:   total=0.074397, steer=0.002205, throttle=0.015593,
+brake=0.005157, conflict=0.001105, tl=0.025898, stop=0.072824
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+
+当前轮次： 25/40
+Train: total=0.013298, steer=0.005548, throttle=0.002421,
+brake=0.000651, conflict=0.000405, tl=0.004685, stop=0.004013
+Val:   total=0.065932, steer=0.002248, throttle=0.015356,
+brake=0.004832, conflict=0.000862, tl=0.016441, stop=0.066738
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+New best model saved: total=0.065932
+
+当前轮次： 26/40
+Train: total=0.012392, steer=0.005470, throttle=0.002352,
+brake=0.000634, conflict=0.000372, tl=0.002574, stop=0.004666
+Val:   total=0.057679, steer=0.001490, throttle=0.014287,
+brake=0.004620, conflict=0.000694, tl=0.016811, stop=0.054175
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+New best model saved: total=0.057679
+
+当前轮次： 27/40
+Train: total=0.013596, steer=0.005418, throttle=0.002266,
+brake=0.000675, conflict=0.000378, tl=0.004332, stop=0.005481
+Val:   total=0.066382, steer=0.001855, throttle=0.014408,
+brake=0.004156, conflict=0.001388, tl=0.040940, stop=0.047383
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+
+当前轮次： 28/40
+Train: total=0.011272, steer=0.005270, throttle=0.002302,
+brake=0.000661, conflict=0.000402, tl=0.000938, stop=0.004476
+Val:   total=0.076323, steer=0.002956, throttle=0.013938,
+brake=0.004554, conflict=0.001771, tl=0.026511, stop=0.079168
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+
+当前轮次： 29/40
+Train: total=0.013118, steer=0.005161, throttle=0.002288,
+brake=0.000720, conflict=0.000421, tl=0.004262, stop=0.004922
+Val:   total=0.066695, steer=0.002998, throttle=0.013312,
+brake=0.004622, conflict=0.000590, tl=0.033105, stop=0.054887
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+
+当前轮次： 30/40
+Train: total=0.011991, steer=0.005049, throttle=0.002204,
+brake=0.000597, conflict=0.000375, tl=0.003140, stop=0.004539
+Val:   total=0.060018, steer=0.001798, throttle=0.013389,
+brake=0.005003, conflict=0.000902, tl=0.023276, stop=0.052426
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+
+当前轮次： 31/40
+Train: total=0.011767, steer=0.004926, throttle=0.002137,
+brake=0.000617, conflict=0.000374, tl=0.003051, stop=0.004502
+Val:   total=0.069652, steer=0.002429, throttle=0.013875,
+brake=0.005530, conflict=0.000494, tl=0.026771, stop=0.064749
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+
+当前轮次： 32/40
+Traceback (most recent call last):
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\train_new.py", line 663, in <module>
+    main()
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\train_new.py", line 555, in main
+    train_stats = trainer.train_epoch()
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\train_new.py", line 176, in train_epoch
+    for batch_idx, (images, targets, prev_speed, tl_labels, is_stopped) in enumerate(pbar):
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\tqdm\std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\utils\data\dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\utils\data\dataloader.py", line 1491, in _next_data
+    idx, data = self._get_data()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\utils\data\dataloader.py", line 1443, in _get_data
+    success, data = self._try_get_data()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\utils\data\dataloader.py", line 1284, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "E:\AnaConda\envs\carla-sim-2\lib\queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "E:\AnaConda\envs\carla-sim-2\lib\threading.py", line 316, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+(carla-sim-2) PS E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main>

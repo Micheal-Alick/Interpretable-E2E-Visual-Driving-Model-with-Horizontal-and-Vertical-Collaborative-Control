@@ -1,0 +1,96 @@
+__pycache__
+*.py[cod]
+*.pyo
+*.pyd
+
+data/
+data/*
+datasets/
+dataset/
+dataset_*/
+driving_data*/
+videos/*
+*.db
+*.sqlite
+
+enhanced*/
+save/
+save_center/
+save_new/
+save*/
+logs/
+log/
+*.csv
+
+
+env
+.venv
+venv
+*.egg-info
+*.egg
+
+.idea
+.vscode
+
+test*/
+inference_results/
+visualization/
+*.json
+*.log
+
+checkpoints/*
+carla_steering*
+*.pt
+*.pth
+*.pth.tar
+*.pth.tar.gz
+*.pth.tar.gz.part
+*.pth.tar.gz.part.1
+
+presentation_plots/*
+
+
+analysis_output/*
+
+efficientnet_model_figures/*
+resnet_model_figures/*
+thesis_figures/*
+thesis_figures_*/
+
+# ======================
+# 忽略 数据集/大模型文件（你不想传的核心！）
+# ======================
+checkpoints_weathers_new/
+*.pth
+*.pt
+*.h5
+*.onnx
+*.bin
+*.weights
+data_weathers/
+*.csv
+*.png
+
+# ======================
+# 忽略 Carla 引擎大文件（整个模拟器都忽略！）
+# ======================
+WindowsNoEditor/
+CarlaUE4/
+Build/
+*.exe
+*.dll
+*.so
+
+# ======================
+# 忽略 Python 缓存/日志（无用文件）
+# ======================
+__pycache__/
+*.pyc
+*.pyo
+*.log
+
+# ======================
+# 忽略系统垃圾文件
+# ======================
+.DS_Store
+Thumbs.db

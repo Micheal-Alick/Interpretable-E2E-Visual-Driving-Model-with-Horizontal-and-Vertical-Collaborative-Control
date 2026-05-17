@@ -1,0 +1,576 @@
+(carla-sim-2) PS E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main> python train_new.py --batch_size 32 --accumulate_steps 1 --epochs 60 -use_all_cameras --use_speed_input --dataset_path "Only_in_SunnyNoon" --modelsave_path "单晴天数据集训练的第三版模型"
+usage: train_new.py [-h] [--batch_size BATCH_SIZE] [--accumulate_steps ACCUMULATE_STEPS] [--epochs EPOCHS] [--lr LR]
+                    [--use_all_cameras] [--run_name RUN_NAME] [--num_workers NUM_WORKERS] [--use_speed_input]
+                    [--no_amp] [--lambda_steer LAMBDA_STEER] [--lambda_throttle LAMBDA_THROTTLE]
+                    [--lambda_brake LAMBDA_BRAKE] [--lambda_conflict LAMBDA_CONFLICT] [--lambda_tl LAMBDA_TL]
+                    [--lambda_stop LAMBDA_STOP] [--dataset_path DATASET_PATH] [--modelsave_path MODELSAVE_PATH]
+train_new.py: error: unrecognized arguments: -use_all_cameras
+(carla-sim-2) PS E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main> python train_new.py --batch_size 32 --accumulate_steps 1 --epochs 60 --use_all_cameras --use_speed_input --dataset_path "Only_in_SunnyNoon" --modelsave_path "单晴天数据集训练的第三版模型"
+使用硬件: cuda
+是否使用速度输入: True
+是否启用AMP(FP16): True
+从 Only_in_SunnyNoon 载入数据
+ 载入了 90000 个样本数据
+合并后总样本数: 90000
+训练样本数: 72000
+验证样本数: 18000
+总参数量: 11,387,592
+可训练参数量: 11,387,592
+
+开始多任务训练...
+总训练轮次: 60
+Batch size: 32
+特征层学习率: 0.001
+使用全部摄像头数据: True
+数据集路径: data_weathers/Only_in_SunnyNoon
+模型保存路径: checkpoints_weathers_new/单晴天数据集训练的第三版模型
+
+当前轮次： 1/60
+Train: total=0.142652, steer=0.042449, throttle=0.033718, brake=0.006544, conflict=0.001996
+Val:   total=0.165181, steer=0.012338, throttle=0.025346, brake=0.007112, conflict=0.000799
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.165181
+
+当前轮次： 2/60
+Train: total=0.049810, steer=0.017886, throttle=0.015134, brake=0.002070, conflict=0.000283
+Val:   total=0.144717, steer=0.010298, throttle=0.021984, brake=0.005643, conflict=0.000416
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.144717
+
+当前轮次： 3/60
+Train: total=0.040681, steer=0.014714, throttle=0.011209, brake=0.002029, conflict=0.000210
+Val:   total=0.135250, steer=0.009533, throttle=0.020416, brake=0.004846, conflict=0.000445
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.135250
+
+当前轮次： 4/60
+Train: total=0.036010, steer=0.013956, throttle=0.009691, brake=0.001799, conflict=0.000245
+Val:   total=0.143401, steer=0.009662, throttle=0.019563, brake=0.005723, conflict=0.000403
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 5/60
+Train: total=0.036868, steer=0.013461, throttle=0.009198, brake=0.001541, conflict=0.000337
+Val:   total=0.163171, steer=0.010473, throttle=0.018320, brake=0.006672, conflict=0.000410
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 6/60
+Train: total=0.031009, steer=0.012259, throttle=0.007750, brake=0.001148, conflict=0.000338
+Val:   total=0.127859, steer=0.009681, throttle=0.019198, brake=0.004019, conflict=0.000465
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.127859
+
+当前轮次： 7/60
+Train: total=0.030205, steer=0.011696, throttle=0.007163, brake=0.000915, conflict=0.000331
+Val:   total=0.159146, steer=0.008952, throttle=0.021650, brake=0.008934, conflict=0.001765
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 8/60
+Train: total=0.030574, steer=0.011578, throttle=0.007157, brake=0.001139, conflict=0.000351
+Val:   total=0.120569, steer=0.009444, throttle=0.017854, brake=0.003176, conflict=0.000356
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.120569
+
+当前轮次： 9/60
+Traceback (most recent call last):
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\train_new.py", line 595, in <module>
+    main()
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\train_new.py", line 491, in main
+    train_stats = trainer.train_epoch()
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\train_new.py", line 187, in train_epoch
+    self.scaler.scale(total_loss / self.accumulate_steps).backward()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\autograd\__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\autograd\graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+(carla-sim-2) PS E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main> python dataset_collect_in_carla_visualization.py --dataset_subname="multi_weather_dataset60000" --max-frames=60000
+开始可视化数据采集，配置如下：
+地图: Town01
+每个地图最大采集帧数: 60000
+数据保存目录: data_weathers/multi_weather_dataset60000
+天气序列: ['sunny', 'foggy', 'rainy', 'night']
+请确认 CarlaUE4.exe 已启动并保持渲染窗口可见。
+Traceback (most recent call last):
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\dataset_collect_in_carla_visualization.py", line 705, in <module>
+    main()
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\dataset_collect_in_carla_visualization.py", line 694, in main
+    time.sleep(2.0)
+KeyboardInterrupt
+(carla-sim-2) PS E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main> python dataset_collect_in_carla_visualization.py --dataset_subname="multi_weather_dataset60000" --max-frames=60000
+开始可视化数据采集，配置如下：
+地图: Town01
+每个地图最大采集帧数: 60000
+数据保存目录: data_weathers/multi_weather_dataset60000
+天气序列: ['sunny', 'foggy', 'rainy', 'night']
+请确认 CarlaUE4.exe 已启动并保持渲染窗口可见。
+开始可视化采集流程...
+目标地图: Town01
+最大采集帧数: 60000
+仿真帧率(FPS): 20
+每 2 个 tick 保存 1 帧
+CarlaUE4 跟车视角: True
+OpenCV Dashboard: True
+线程编号 0: 开始采集地图 Town01 的数据（可视化版本）
+INFO:  Found the required file in cache!  Carla/Maps/Nav/Town10HD_Opt.bin
+已设置交通灯时长：红灯=2.0s，绿灯=10.0s，黄灯=3.0s；共 36 个交通灯
+INFO:  Found the required file in cache!  Carla/Maps/TM/Town01.bin
+线程编号：0 | 地图：Town01 | 已采集 500 帧
+线程编号：0 | 地图：Town01 | 已采集 1000 帧
+线程编号：0 | 地图：Town01 | 已采集 1500 帧
+线程编号：0 | 地图：Town01 | 已采集 2000 帧
+线程编号：0 | 地图：Town01 | 已采集 2500 帧
+线程编号：0 | 地图：Town01 | 已采集 3000 帧
+线程编号：0 | 地图：Town01 | 已采集 3500 帧
+线程编号：0 | 地图：Town01 | 已采集 4000 帧
+线程编号：0 | 地图：Town01 | 已采集 4500 帧
+线程编号：0 | 地图：Town01 | 已采集 5000 帧
+线程编号：0 | 地图：Town01 | 已采集 5500 帧
+线程编号：0 | 地图：Town01 | 已采集 6000 帧
+线程编号：0 | 地图：Town01 | 已采集 6500 帧
+线程编号：0 | 地图：Town01 | 已采集 7000 帧
+线程编号：0 | 地图：Town01 | 已采集 7500 帧
+线程编号：0 | 地图：Town01 | 已采集 8000 帧
+线程编号：0 | 地图：Town01 | 已采集 8500 帧
+线程编号：0 | 地图：Town01 | 已采集 9000 帧
+线程编号：0 | 地图：Town01 | 已采集 9500 帧
+线程编号：0 | 地图：Town01 | 已采集 10000 帧
+线程编号：0 | 地图：Town01 | 已采集 10500 帧
+线程编号：0 | 地图：Town01 | 已采集 11000 帧
+线程编号：0 | 地图：Town01 | 已采集 11500 帧
+线程编号：0 | 地图：Town01 | 已采集 12000 帧
+线程编号：0 | 地图：Town01 | 已采集 12500 帧
+线程编号：0 | 地图：Town01 | 已采集 13000 帧
+线程编号：0 | 地图：Town01 | 已采集 13500 帧
+线程编号：0 | 地图：Town01 | 已采集 14000 帧
+线程编号：0 | 地图：Town01 | 已采集 14500 帧
+线程编号：0 | 地图：Town01 | 已采集 15000 帧
+线程编号：0 | 地图：Town01 | 天气切换到 foggy（帧 15000）
+线程编号：0 | 地图：Town01 | 已采集 15500 帧
+线程编号：0 | 地图：Town01 | 已采集 16000 帧
+线程编号：0 | 地图：Town01 | 已采集 16500 帧
+线程编号：0 | 地图：Town01 | 已采集 17000 帧
+线程编号：0 | 地图：Town01 | 已采集 17500 帧
+线程编号：0 | 地图：Town01 | 已采集 18000 帧
+线程编号：0 | 地图：Town01 | 已采集 18500 帧
+线程编号：0 | 地图：Town01 | 已采集 19000 帧
+线程编号：0 | 地图：Town01 | 已采集 19500 帧
+线程编号：0 | 地图：Town01 | 已采集 20000 帧
+线程编号：0 | 地图：Town01 | 已采集 20500 帧
+线程编号：0 | 地图：Town01 | 已采集 21000 帧
+线程编号：0 | 地图：Town01 | 已采集 21500 帧
+线程编号：0 | 地图：Town01 | 已采集 22000 帧
+线程编号：0 | 地图：Town01 | 已采集 22500 帧
+线程编号：0 | 地图：Town01 | 已采集 23000 帧
+线程编号：0 | 地图：Town01 | 已采集 23500 帧
+线程编号：0 | 地图：Town01 | 已采集 24000 帧
+线程编号：0 | 地图：Town01 | 已采集 24500 帧
+线程编号：0 | 地图：Town01 | 已采集 25000 帧
+线程编号：0 | 地图：Town01 | 已采集 25500 帧
+线程编号：0 | 地图：Town01 | 已采集 26000 帧
+线程编号：0 | 地图：Town01 | 已采集 26500 帧
+线程编号：0 | 地图：Town01 | 已采集 27000 帧
+线程编号：0 | 地图：Town01 | 已采集 27500 帧
+线程编号：0 | 地图：Town01 | 已采集 28000 帧
+线程编号：0 | 地图：Town01 | 已采集 28500 帧
+线程编号：0 | 地图：Town01 | 已采集 29000 帧
+线程编号：0 | 地图：Town01 | 已采集 29500 帧
+线程编号：0 | 地图：Town01 | 已采集 30000 帧
+线程编号：0 | 地图：Town01 | 天气切换到 rainy（帧 30000）
+线程编号：0 | 地图：Town01 | 已采集 30500 帧
+线程编号：0 | 地图：Town01 | 已采集 31000 帧
+线程编号：0 | 地图：Town01 | 已采集 31500 帧
+线程编号：0 | 地图：Town01 | 已采集 32000 帧
+线程编号：0 | 地图：Town01 | 已采集 32500 帧
+线程编号：0 | 地图：Town01 | 已采集 33000 帧
+线程编号：0 | 地图：Town01 | 已采集 33500 帧
+线程编号：0 | 地图：Town01 | 已采集 34000 帧
+线程编号：0 | 地图：Town01 | 已采集 34500 帧
+线程编号：0 | 地图：Town01 | 已采集 35000 帧
+线程编号：0 | 地图：Town01 | 已采集 35500 帧
+线程编号：0 | 地图：Town01 | 已采集 36000 帧
+线程编号：0 | 地图：Town01 | 已采集 36500 帧
+线程编号：0 | 地图：Town01 | 已采集 37000 帧
+线程编号：0 | 地图：Town01 | 已采集 37500 帧
+线程编号：0 | 地图：Town01 | 已采集 38000 帧
+线程编号：0 | 地图：Town01 | 已采集 38500 帧
+线程编号：0 | 地图：Town01 | 已采集 39000 帧
+线程编号：0 | 地图：Town01 | 已采集 39500 帧
+线程编号：0 | 地图：Town01 | 已采集 40000 帧
+线程编号：0 | 地图：Town01 | 已采集 40500 帧
+线程编号：0 | 地图：Town01 | 已采集 41000 帧
+线程编号：0 | 地图：Town01 | 已采集 41500 帧
+线程编号：0 | 地图：Town01 | 已采集 42000 帧
+线程编号：0 | 地图：Town01 | 已采集 42500 帧
+线程编号：0 | 地图：Town01 | 已采集 43000 帧
+线程编号：0 | 地图：Town01 | 已采集 43500 帧
+线程编号：0 | 地图：Town01 | 已采集 44000 帧
+线程编号：0 | 地图：Town01 | 已采集 44500 帧
+线程编号：0 | 地图：Town01 | 已采集 45000 帧
+线程编号：0 | 地图：Town01 | 天气切换到 night（帧 45000）
+线程编号：0 | 地图：Town01 | 已采集 45500 帧
+线程编号：0 | 地图：Town01 | 已采集 46000 帧
+线程编号：0 | 地图：Town01 | 已采集 46500 帧
+线程编号：0 | 地图：Town01 | 已采集 47000 帧
+线程编号：0 | 地图：Town01 | 已采集 47500 帧
+线程编号：0 | 地图：Town01 | 已采集 48000 帧
+线程编号：0 | 地图：Town01 | 已采集 48500 帧
+线程编号：0 | 地图：Town01 | 已采集 49000 帧
+线程编号：0 | 地图：Town01 | 已采集 49500 帧
+线程编号：0 | 地图：Town01 | 已采集 50000 帧
+线程编号：0 | 地图：Town01 | 已采集 50500 帧
+线程编号：0 | 地图：Town01 | 已采集 51000 帧
+线程编号：0 | 地图：Town01 | 已采集 51500 帧
+线程编号：0 | 地图：Town01 | 已采集 52000 帧
+线程编号：0 | 地图：Town01 | 已采集 52500 帧
+线程编号：0 | 地图：Town01 | 已采集 53000 帧
+线程编号：0 | 地图：Town01 | 已采集 53500 帧
+线程编号：0 | 地图：Town01 | 已采集 54000 帧
+线程编号：0 | 地图：Town01 | 已采集 54500 帧
+线程编号：0 | 地图：Town01 | 已采集 55000 帧
+线程编号：0 | 地图：Town01 | 已采集 55500 帧
+线程编号：0 | 地图：Town01 | 已采集 56000 帧
+线程编号：0 | 地图：Town01 | 已采集 56500 帧
+线程编号：0 | 地图：Town01 | 已采集 57000 帧
+线程编号：0 | 地图：Town01 | 已采集 57500 帧
+线程编号：0 | 地图：Town01 | 已采集 58000 帧
+线程编号：0 | 地图：Town01 | 已采集 58500 帧
+线程编号：0 | 地图：Town01 | 已采集 59000 帧
+线程编号：0 | 地图：Town01 | 已采集 59500 帧
+线程编号：0 | 地图：Town01 | 已采集 60000 帧
+线程编号 0: 地图 Town01 采集完成，共采集 60000 帧（可视化版本）
+数据保存目录: E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\data_weathers\multi_weather_dataset60000
+标注CSV路径: E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\data_weathers\multi_weather_dataset60000\steering_data.csv
+(carla-sim-2) PS E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main> python train_new.py --batch_size 32 --accumulate_steps 1 --epochs 60 --use_all_cameras --use_speed_input --dataset_path "multi_weather_dataset60000" --modelsave_path "60000桢第三版模型"
+使用硬件: cuda
+是否使用速度输入: True
+是否启用AMP(FP16): True
+从 multi_weather_dataset60000 载入数据
+ 载入了 180000 个样本数据
+合并后总样本数: 180000
+训练样本数: 144000
+验证样本数: 36000
+总参数量: 11,387,592
+可训练参数量: 11,387,592
+
+开始多任务训练...
+总训练轮次: 60
+Batch size: 32
+特征层学习率: 0.001
+使用全部摄像头数据: True
+数据集路径: data_weathers/multi_weather_dataset60000
+模型保存路径: checkpoints_weathers_new/60000桢第三版模型
+
+当前轮次： 1/60
+Train: total=0.103996, steer=0.034338, throttle=0.032280, brake=0.003365, conflict=0.001106
+Val:   total=0.162448, steer=0.010938, throttle=0.025456, brake=0.007458, conflict=0.000410
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.162448
+
+当前轮次： 2/60
+Train: total=0.043781, steer=0.016001, throttle=0.015161, brake=0.001574, conflict=0.000246
+Val:   total=0.113274, steer=0.009162, throttle=0.022998, brake=0.006216, conflict=0.000478
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.113274
+
+当前轮次： 3/60
+Train: total=0.035722, steer=0.013231, throttle=0.011371, brake=0.001333, conflict=0.000237
+Val:   total=0.176215, steer=0.015046, throttle=0.021364, brake=0.006420, conflict=0.000343
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 4/60
+Train: total=0.031640, steer=0.012239, throttle=0.009786, brake=0.001312, conflict=0.000223
+Val:   total=0.113756, steer=0.008488, throttle=0.020761, brake=0.005243, conflict=0.000578
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 5/60
+Train: total=0.030362, steer=0.011392, throttle=0.008635, brake=0.001283, conflict=0.000228
+Val:   total=0.150871, steer=0.007729, throttle=0.020347, brake=0.006815, conflict=0.004379
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 6/60
+Train: total=0.030554, steer=0.011337, throttle=0.008174, brake=0.001381, conflict=0.000223
+Val:   total=0.104992, steer=0.011730, throttle=0.019408, brake=0.005234, conflict=0.001011
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.104992
+
+当前轮次： 7/60
+Train: total=0.027337, steer=0.010687, throttle=0.007406, brake=0.001298, conflict=0.000209
+Val:   total=0.125355, steer=0.008246, throttle=0.019529, brake=0.006216, conflict=0.000330
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 8/60
+Train: total=0.026752, steer=0.010318, throttle=0.006830, brake=0.001386, conflict=0.000230
+Val:   total=0.103777, steer=0.004990, throttle=0.019574, brake=0.005031, conflict=0.000413
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+New best model saved: total=0.103777
+
+当前轮次： 9/60
+Train: total=0.027596, steer=0.010165, throttle=0.006724, brake=0.001386, conflict=0.000242
+Val:   total=0.108613, steer=0.005856, throttle=0.021102, brake=0.006069, conflict=0.000443
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 10/60
+Train: total=0.026134, steer=0.009482, throttle=0.006336, brake=0.001405, conflict=0.000233
+Val:   total=0.140987, steer=0.004172, throttle=0.020271, brake=0.007117, conflict=0.000227
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 11/60
+Train: total=0.024253, steer=0.009352, throttle=0.006192, brake=0.001241, conflict=0.000227
+Val:   total=0.121800, steer=0.002512, throttle=0.020434, brake=0.006002, conflict=0.000160
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 12/60
+Train: total=0.024261, steer=0.008998, throttle=0.006108, brake=0.001107, conflict=0.000217
+Val:   total=0.156882, steer=0.002956, throttle=0.020342, brake=0.008771, conflict=0.000386
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 13/60
+Train: total=0.023886, steer=0.009068, throttle=0.005659, brake=0.001251, conflict=0.000230
+Val:   total=0.105617, steer=0.003727, throttle=0.020254, brake=0.005292, conflict=0.000431
+LR(backbone/shared/heads): 1.00e-04 / 5.00e-04 / 1.00e-03
+
+当前轮次： 14/60
+Train: total=0.022458, steer=0.008612, throttle=0.005444, brake=0.001210, conflict=0.000217
+Val:   total=0.104816, steer=0.002619, throttle=0.019008, brake=0.005118, conflict=0.000535
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 15/60
+Train: total=0.019108, steer=0.007213, throttle=0.003769, brake=0.001081, conflict=0.000210
+Val:   total=0.099432, steer=0.002351, throttle=0.018418, brake=0.005114, conflict=0.000451
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+New best model saved: total=0.099432
+
+当前轮次： 16/60
+Train: total=0.018706, steer=0.007009, throttle=0.003697, brake=0.001153, conflict=0.000217
+Val:   total=0.090262, steer=0.002295, throttle=0.017051, brake=0.004744, conflict=0.000714
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+New best model saved: total=0.090262
+
+当前轮次： 17/60
+Train: total=0.017455, steer=0.006674, throttle=0.003458, brake=0.001039, conflict=0.000296
+Val:   total=0.110999, steer=0.002232, throttle=0.017194, brake=0.007064, conflict=0.001007
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 18/60
+Train: total=0.018374, steer=0.006701, throttle=0.003523, brake=0.001104, conflict=0.000322
+Val:   total=0.089715, steer=0.002686, throttle=0.017094, brake=0.004789, conflict=0.000563
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+New best model saved: total=0.089715
+
+当前轮次： 19/60
+Train: total=0.017926, steer=0.006612, throttle=0.003381, brake=0.000996, conflict=0.000298
+Val:   total=0.094506, steer=0.002310, throttle=0.017469, brake=0.004939, conflict=0.000509
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 20/60
+Train: total=0.016877, steer=0.006555, throttle=0.003303, brake=0.000909, conflict=0.000311
+Val:   total=0.100386, steer=0.002334, throttle=0.017314, brake=0.004980, conflict=0.000336
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 21/60
+Train: total=0.015931, steer=0.006568, throttle=0.003238, brake=0.000844, conflict=0.000293
+Val:   total=0.123640, steer=0.002049, throttle=0.018715, brake=0.006508, conflict=0.001695
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 22/60
+Train: total=0.016960, steer=0.006476, throttle=0.003297, brake=0.000847, conflict=0.000293
+Val:   total=0.096952, steer=0.002763, throttle=0.016460, brake=0.004641, conflict=0.000310
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 23/60
+Train: total=0.017375, steer=0.006486, throttle=0.003339, brake=0.000844, conflict=0.000293
+Val:   total=0.086787, steer=0.002093, throttle=0.016401, brake=0.004695, conflict=0.000763
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+New best model saved: total=0.086787
+
+当前轮次： 24/60
+Train: total=0.016826, steer=0.006506, throttle=0.003336, brake=0.000873, conflict=0.000291
+Val:   total=0.088767, steer=0.002386, throttle=0.017578, brake=0.004910, conflict=0.000327
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 25/60
+Train: total=0.016148, steer=0.006491, throttle=0.003148, brake=0.000787, conflict=0.000282
+Val:   total=0.092346, steer=0.001853, throttle=0.017711, brake=0.004448, conflict=0.000516
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 26/60
+Train: total=0.016608, steer=0.006469, throttle=0.003287, brake=0.000895, conflict=0.000292
+Val:   total=0.097970, steer=0.002366, throttle=0.016249, brake=0.004882, conflict=0.000314
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 27/60
+Train: total=0.016375, steer=0.006329, throttle=0.003115, brake=0.000722, conflict=0.000286
+Val:   total=0.102859, steer=0.003467, throttle=0.017064, brake=0.006172, conflict=0.000652
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 28/60
+Train: total=0.016058, steer=0.006319, throttle=0.003113, brake=0.000768, conflict=0.000279
+Val:   total=0.090741, steer=0.001913, throttle=0.015209, brake=0.005286, conflict=0.000333
+LR(backbone/shared/heads): 5.00e-05 / 2.50e-04 / 5.00e-04
+
+当前轮次： 29/60
+Train: total=0.015775, steer=0.006185, throttle=0.003004, brake=0.000841, conflict=0.000285
+Val:   total=0.106618, steer=0.002752, throttle=0.019296, brake=0.005050, conflict=0.000729
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+
+当前轮次： 30/60
+Train: total=0.014882, steer=0.005491, throttle=0.002537, brake=0.000754, conflict=0.000268
+Val:   total=0.089299, steer=0.001827, throttle=0.017429, brake=0.004631, conflict=0.000515
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+
+当前轮次： 31/60
+Train: total=0.013444, steer=0.005190, throttle=0.002311, brake=0.000705, conflict=0.000241
+Val:   total=0.085649, steer=0.001644, throttle=0.015034, brake=0.004551, conflict=0.000536
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+New best model saved: total=0.085649
+
+当前轮次： 32/60
+Train: total=0.012749, steer=0.005118, throttle=0.002282, brake=0.000649, conflict=0.000243
+Val:   total=0.077402, steer=0.001378, throttle=0.014198, brake=0.004222, conflict=0.000420
+LR(backbone/shared/heads): 2.50e-05 / 1.25e-04 / 2.50e-04
+New best model saved: total=0.077402
+
+当前轮次： 33/60
+Training:  15%|███▎                  | 681/4500 [02:24<13:59,  4.55it/s, L=0.0052, S=0.0032, T=0.0012, B=0.0003, TL=0.0001, ST=0.0002]Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+Error in atexit._run_exitfuncs:
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 667, in _exitfunc
+Error in atexit._run_exitfuncs:
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+Error in atexit._run_exitfuncs:
+Error in atexit._run_exitfuncs:
+Error in atexit._run_exitfuncs:
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 667, in _exitfunc
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 667, in _exitfunc
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 667, in _exitfunc
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 667, in _exitfunc
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 667, in _exitfunc
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 667, in _exitfunc
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 667, in _exitfunc
+    f()
+    f()
+    f()
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 591, in __call__
+    f()
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 591, in __call__
+    return info.func(*info.args, **(info.kwargs or {}))
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 591, in __call__
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 449, in _del_library
+    return info.func(*info.args, **(info.kwargs or {}))
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 591, in __call__
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 449, in _del_library
+    return info.func(*info.args, **(info.kwargs or {}))
+    return info.func(*info.args, **(info.kwargs or {}))
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 449, in _del_library
+    f()
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 591, in __call__
+    handle.destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\utils.py", line 42, in destroy
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 449, in _del_library
+    f()
+    self._on_destroy()
+    handle.destroy()
+    handle.destroy()
+    return info.func(*info.args, **(info.kwargs or {}))
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\utils.py", line 42, in destroy
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\fake_impl.py", line 67, in deregister_fake_class
+    f()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 449, in _del_library
+    handle.destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 591, in __call__
+    f()
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 591, in __call__
+    self.lib._destroy()
+    self._on_destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\utils.py", line 42, in destroy
+    return info.func(*info.args, **(info.kwargs or {}))
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\utils.py", line 42, in destroy
+    return info.func(*info.args, **(info.kwargs or {}))
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 414, in _destroy
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\fake_impl.py", line 67, in deregister_fake_class
+    handle.destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\utils.py", line 42, in destroy
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 449, in _del_library
+    self._on_destroy()
+    self._on_destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 449, in _del_library
+  File "E:\AnaConda\envs\carla-sim-2\lib\weakref.py", line 591, in __call__
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\fake_impl.py", line 67, in deregister_fake_class
+    handle.destroy()
+    self.lib._destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\fake_impl.py", line 67, in deregister_fake_class
+    handle.destroy()
+    self.lib._destroy()
+    return info.func(*info.args, **(info.kwargs or {}))
+    self.m.reset()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\utils.py", line 42, in destroy
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 414, in _destroy
+    self.lib._destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\utils.py", line 42, in destroy
+    self._on_destroy()
+KeyboardInterrupt
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 449, in _del_library
+KeyboardInterrupt
+    self._on_destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 414, in _destroy
+    self.m.reset()
+    self._on_destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\fake_impl.py", line 67, in deregister_fake_class
+    handle.destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\fake_impl.py", line 67, in deregister_fake_class
+    self.lib._destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\fake_impl.py", line 67, in deregister_fake_class
+    self.lib._destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 415, in _destroy
+KeyboardInterrupt
+    self.m = None
+    self.m.reset()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\utils.py", line 42, in destroy
+    self.lib._destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 414, in _destroy
+KeyboardInterrupt
+KeyboardInterrupt
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 413, in _destroy
+    self.m.reset()
+    if self.m is not None:
+    self._on_destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\_library\fake_impl.py", line 67, in deregister_fake_class
+KeyboardInterrupt
+KeyboardInterrupt
+    self.lib._destroy()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\library.py", line 415, in _destroy
+    self.m = None
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\train_new.py", line 595, in <module>
+    main()
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\train_new.py", line 491, in main
+    train_stats = trainer.train_epoch()
+  File "E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main\train_new.py", line 158, in train_epoch
+    for batch_idx, (images, targets, prev_speed, tl_labels, is_stopped) in enumerate(pbar):
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\tqdm\std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\utils\data\dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\utils\data\dataloader.py", line 1491, in _next_data
+    idx, data = self._get_data()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\utils\data\dataloader.py", line 1443, in _get_data
+    success, data = self._try_get_data()
+  File "E:\AnaConda\envs\carla-sim-2\lib\site-packages\torch\utils\data\dataloader.py", line 1284, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "E:\AnaConda\envs\carla-sim-2\lib\queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "E:\AnaConda\envs\carla-sim-2\lib\threading.py", line 316, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+(carla-sim-2) PS E:\Carla_0.9.15\WindowsNoEditor\PythonAPI\examples\NVIDIA E2E Project\CarlaAutonomousDriving-main>
