@@ -40,6 +40,10 @@ training_flow.png
 visualization_requirements.txt
 工程开发记录.md
 
+# 不传大文件，模型文件.pt和.pth通常比较大，onnx文件也可能较大，根据需要可以选择性上传特定的模型文件
+*.pt
+*.pth
+*.onnx
 
 
 
