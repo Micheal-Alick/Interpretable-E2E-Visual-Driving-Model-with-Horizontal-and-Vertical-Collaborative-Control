@@ -1,96 +1,47 @@
-__pycache__
-*.py[cod]
-*.pyo
-*.pyd
 
-data/
-data/*
-datasets/
-dataset/
-dataset_*/
-driving_data*/
-videos/*
-*.db
-*.sqlite
-
-enhanced*/
-save/
-save_center/
-save_new/
-save*/
-logs/
-log/
-*.csv
-
-
-env
-.venv
-venv
-*.egg-info
-*.egg
-
-.idea
-.vscode
-
-test*/
-inference_results/
-visualization/
-*.json
-*.log
-
-checkpoints/*
-carla_steering*
-*.pt
-*.pth
-*.pth.tar
-*.pth.tar.gz
-*.pth.tar.gz.part
-*.pth.tar.gz.part.1
-
-presentation_plots/*
-
-
-analysis_output/*
-
-efficientnet_model_figures/*
-resnet_model_figures/*
-thesis_figures/*
-thesis_figures_*/
-
-# ======================
-# 忽略 数据集/大模型文件（你不想传的核心！）
-# ======================
+.vscode/
+_pycache__/
+analysis/
+analysis_output/
+checkpoints_weathers/
 checkpoints_weathers_new/
-*.pth
-*.pt
-*.h5
-*.onnx
-*.bin
-*.weights
+# 模型文件.pt本身有点大，就不上传了
+# checkpoints_weathers_new/*
+# ！"checkpoints_weathers_new\修改loss权重的第三版模型\carla_multitask_best.pt"
 data_weathers/
-*.csv
-*.png
+docs/
+logs/
+multitask_model_figures/
+resnet_model_figures/
+tools/
+Train_Log_Info/
+ability_test.csv
+autopilot规则逻辑.jpg
+carla_nvidida_e2e_66x200.onnx
+data_set_loader.py
+demo_visualization.py
+export onnx.py
+grad_cam_mask.py
+gradcam_visualization.py
+model.py
+model_comparison.pdf
+model_visualization.py
+model_visualization_notebook.ipynb
+Nvidia_PilotNet.jpg
+predict_steering_in_carla.py
+predict_with_grad_cam.py
+README.md
+resnet18.svg
+simplified_visualization.py
+test_gradcam.py
+test_model(pt)_form.py
+train.py
+training_flow.png
+visualization_requirements.txt
+工程开发记录.md
 
-# ======================
-# 忽略 Carla 引擎大文件（整个模拟器都忽略！）
-# ======================
-WindowsNoEditor/
-CarlaUE4/
-Build/
-*.exe
-*.dll
-*.so
 
-# ======================
-# 忽略 Python 缓存/日志（无用文件）
-# ======================
-__pycache__/
-*.pyc
-*.pyo
-*.log
 
-# ======================
-# 忽略系统垃圾文件
-# ======================
-.DS_Store
-Thumbs.db
+
+
+
