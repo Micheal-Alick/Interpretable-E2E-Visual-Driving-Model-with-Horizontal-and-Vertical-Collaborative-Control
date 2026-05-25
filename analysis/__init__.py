@@ -1,1 +1,0 @@
-# Analysis package for autonomous driving evaluation 
