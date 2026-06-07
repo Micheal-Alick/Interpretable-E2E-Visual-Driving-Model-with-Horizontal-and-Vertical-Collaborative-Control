@@ -31,10 +31,12 @@ class MaskVisualizer:
         device: Optional[torch.device] = None,
         overlay_alpha: float = 0.45,
         colormap: int = cv2.COLORMAP_JET,
+        roi_keep_ratio: float = 0.80,
     ) -> None:
         self.device = device or torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.overlay_alpha = float(np.clip(overlay_alpha, 0.0, 1.0))
         self.colormap = colormap
+        self.roi_keep_ratio = float(np.clip(roi_keep_ratio, 0.0, 1.0))
         self.mask_generator = DeconvolutionMaskGenerator(model=model, device=self.device)
 
     def build_overlay_from_model_input(
@@ -53,6 +55,15 @@ class MaskVisualizer:
         # 1) 先根据当前模型输入生成单通道 mask。
         result = self.mask_generator.generate_mask_from_tensor(model_input_tensor)
         mask = result["mask"]
+
+        # ---- ROI 区域裁剪：仅保留图像中下方区域供注意力遮罩 ----
+        # 将 mask 顶部（天空等无关区域）置零，只保留自底向上的 keep_ratio 比例区域。
+        if self.roi_keep_ratio < 1.0:
+            mask_h = mask.shape[0]
+            cutoff_row = int(mask_h * (1.0 - self.roi_keep_ratio))
+            if cutoff_row > 0:
+                mask[:cutoff_row, :] = 0.0
+
         # 2) 再派生热力图与 overlay，便于调试和展示复用。
         heatmap_bgr = self.mask_generator.create_heatmap(mask, colormap=self.colormap)
         overlay_bgr = self.mask_generator.overlay_mask_on_rgb(

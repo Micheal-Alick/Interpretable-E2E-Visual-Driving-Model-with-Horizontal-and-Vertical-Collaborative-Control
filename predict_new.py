@@ -261,6 +261,7 @@ class CarlaMultiTaskModelTester:
         enable_mask_visualization=True,
         mask_alpha=0.45,
         mask_update_interval=1,
+        mask_roi_keep_ratio=0.80,
         save_mask_video=False,
         mask_video_path="analysis_output/mask_overlay.mp4",
         mask_video_fps=20.0,
@@ -299,6 +300,7 @@ class CarlaMultiTaskModelTester:
         self.enable_mask_visualization = bool(enable_mask_visualization)
         self.mask_alpha = float(np.clip(mask_alpha, 0.0, 1.0))
         self.mask_update_interval = max(1, int(mask_update_interval))
+        self.mask_roi_keep_ratio = float(np.clip(mask_roi_keep_ratio, 0.0, 1.0))
         self.save_mask_video = bool(save_mask_video)
         self.mask_video_path = Path(mask_video_path)
         self.mask_video_fps = float(mask_video_fps)
@@ -314,10 +316,12 @@ class CarlaMultiTaskModelTester:
                     model=self._mask_model_adapter,
                     device=self.device,
                     overlay_alpha=self.mask_alpha,
+                    roi_keep_ratio=self.mask_roi_keep_ratio,
                 )
                 print(
                     "Attention heatmap enabled "
-                    f"(alpha={self.mask_alpha:.2f}, interval={self.mask_update_interval})"
+                    f"(alpha={self.mask_alpha:.2f}, interval={self.mask_update_interval}, "
+                    f"roi_keep_ratio={self.mask_roi_keep_ratio:.2f})"
                 )
             except Exception as e:
                 print(f"Failed to initialize attention heatmap: {e}")
@@ -1269,7 +1273,8 @@ class CarlaMultiTaskModelTester:
         )
         print(
             f"Attention heatmap: {self.enable_mask_visualization} "
-            f"(interval={self.mask_update_interval}, alpha={self.mask_alpha:.2f})"
+            f"(interval={self.mask_update_interval}, alpha={self.mask_alpha:.2f}, "
+            f"roi_keep_ratio={self.mask_roi_keep_ratio:.2f})"
         )
         print(
             f"Save mask video: {self.save_mask_video} "
@@ -1604,6 +1609,7 @@ def main():
     parser.add_argument("--use_speed_input", action="store_true", help="Enable speed branch in model forward")
     parser.add_argument("--mask_alpha", type=float, default=0.45, help="Alpha blend value for attention heatmap overlay")
     parser.add_argument("--mask_update_interval", type=int, default=1, help="Update attention heatmap every N frames")
+    parser.add_argument("--mask_roi_keep_ratio", type=float, default=0.80, help="ROI keep ratio from image bottom (0~1), keeps bottom portion for mask overlay")
     parser.add_argument("--save_mask_video", action="store_true", help="Save dashboard with attention heatmap as mp4 video")
     parser.add_argument("--mask_video_path", type=str, default="analysis_output/mask_overlay.mp4", help="Output path for recorded mask video")
     parser.add_argument("--mask_video_fps", type=float, default=20.0, help="FPS used for recorded mask video")

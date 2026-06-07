@@ -464,7 +464,7 @@ def main():
     parser.add_argument("--lambda_conflict", type=float, default=0.25)
     parser.add_argument("--lambda_tl", type=float, default=0.5, help="Traffic-light classification loss weight")
     parser.add_argument("--lambda_stop", type=float, default=0.5, help="Is-stopped loss weight")
-    parser.add_argument("--dataset_path", type=str, default="dataset_carla_visual_Town01", help="Dataset folder name under data_weathers")
+    parser.add_argument("--dataset_path", type=str, default="multi_weather_dataset60000", help="Dataset folder name under data_weathers")
     parser.add_argument("--modelsave_path", type=str, default=None, help="Model save folder name under checkpoints_weathers_new (default: run_name)")
     
     # 把命令行参数解析为 args 对象，后续通过 args.参数名 访问各个参数值。

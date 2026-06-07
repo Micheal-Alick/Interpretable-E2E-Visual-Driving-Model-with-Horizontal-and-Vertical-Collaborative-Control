@@ -12,7 +12,9 @@ data_weathers/
 docs/
 logs/
 multitask_model_figures/
+Project for Orin X/
 resnet_model_figures/
+src/
 tools/
 Train_Log_Info/
 ability_test.csv
@@ -20,16 +22,17 @@ autopilot规则逻辑.jpg
 carla_nvidida_e2e_66x200.onnx
 data_set_loader.py
 demo_visualization.py
+ex_e2edrive_with_forcefeedback.py
 export onnx.py
+g29_udp_to_ros2_bridge.py
 grad_cam_mask.py
 gradcam_visualization.py
-model.py
 model_comparison.pdf
-model_visualization.py
 model_visualization_notebook.ipynb
 Nvidia_PilotNet.jpg
 predict_steering_in_carla.py
 predict_with_grad_cam.py
+Project for Orin X.zip
 README.md
 resnet18.svg
 simplified_visualization.py
@@ -44,7 +47,8 @@ visualization_requirements.txt
 *.pt
 *.pth
 *.onnx
-
+# 不传说明性质的文件
+*.md
 
 
 
